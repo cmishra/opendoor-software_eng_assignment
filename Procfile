@@ -1,1 +1,1 @@
-web: gunicorn obscure-springs-3098.wsgi
+web: gunicorn gettingstarted.wsgi --log-file -

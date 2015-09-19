@@ -1,2 +1,5 @@
+venv
 *.pyc
-site
+staticfiles
+.env
+db.sqlite3

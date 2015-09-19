@@ -1,52 +1,36 @@
-# Heroku buildpack: Python
-![python-banner](https://cloud.githubusercontent.com/assets/51578/8914205/ecf2047c-346b-11e5-98c5-42547f9f4410.jpg)
+# python-getting-started
 
-This is a [Heroku buildpack](http://devcenter.heroku.com/articles/buildpacks) for Python apps, powered by [pip](http://www.pip-installer.org/).
+A barebones Python app, which can easily be deployed to Heroku.
 
+This application support the [Getting Started with Python on Heroku](https://devcenter.heroku.com/articles/getting-started-with-python) article - check it out.
 
-Usage
------
+## Running Locally
 
-Example usage:
+Make sure you have Python [installed properly](http://install.python-guide.org).  Also, install the [Heroku Toolbelt](https://toolbelt.heroku.com/) and [Postgres](https://devcenter.heroku.com/articles/heroku-postgresql#local-setup).
 
-    $ ls
-    Procfile  requirements.txt  web.py
+```sh
+$ git clone git@github.com:heroku/python-getting-started.git
+$ cd python-getting-started
+$ pip install -r requirements.txt
+$ createdb python_getting_started
+$ foreman run python manage.py migrate
+$ python manage.py collectstatic
+$ foreman start web
+```
 
-    $ heroku create --buildpack git://github.com/heroku/heroku-buildpack-python.git
+Your app should now be running on [localhost:5000](http://localhost:5000/).
 
-    $ git push heroku master
-    ...
-    -----> Python app detected
-    -----> Installing runtime (python-2.7.9)
-    -----> Installing dependencies using pip
-           Downloading/unpacking requests (from -r requirements.txt (line 1))
-           Installing collected packages: requests
-           Successfully installed requests
-           Cleaning up...
-    -----> Discovering process types
-           Procfile declares types -> (none)
+## Deploying to Heroku
 
-You can also add it to upcoming builds of an existing application:
+```sh
+$ heroku create
+$ git push heroku master
+$ heroku run python manage.py migrate
+$ heroku open
+```
 
-    $ heroku buildpacks:set git://github.com/heroku/heroku-buildpack-python.git
+## Documentation
 
-The buildpack will detect your app as Python if it has the file `requirements.txt` in the root.
+For more information about using Python on Heroku, see these Dev Center articles:
 
-It will use Pip to install your dependencies, vendoring a copy of the Python runtime into your slug.
-
-Specify a Runtime
------------------
-
-You can also provide arbitrary releases Python with a `runtime.txt` file.
-
-    $ cat runtime.txt
-    python-3.4.3
-
-Runtime options include:
-
-- python-2.7.9
-- python-3.4.3
-- pypy-2.4.0 (unsupported, experimental)
-- pypy3-2.4.0 (unsupported, experimental)
-
-Other [unsupported runtimes](https://github.com/heroku/heroku-buildpack-python/tree/master/builds/runtimes) are available as well.
+- [Python on Heroku](https://devcenter.heroku.com/categories/python)
