@@ -5,7 +5,7 @@ from .models import Greeting
 
 # Create your views here.
 def index(request):
-    return render(request, "Hi, let's see if I can just pass a string")
+    return "<html>Hi, let's see if I can just pass a string</html>"
 
 
 def db(request):
