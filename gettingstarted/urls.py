@@ -4,6 +4,7 @@ from django.contrib import admin
 admin.autodiscover()
 
 import hello.views
+import listings.views
 
 urlpatterns = patterns('',
     # Examples:
@@ -13,6 +14,6 @@ urlpatterns = patterns('',
     url(r'^$', hello.views.index, name='index'),
     url(r'^$', listings.views.index, name='index'),
     url(r'^db', hello.views.db, name='db'),
-    '^admin/', include(admin.site.urls)),
+    url(r'^admin/', include(admin.site.urls)),
 
 )
