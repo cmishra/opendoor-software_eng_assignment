@@ -18,4 +18,5 @@ for index, row in data.iterrows():
                   bedrooms=row['bedrooms'],
                   bathrooms=row['bathrooms'],
                   sq_ft=row['sq_ft'])
+    print row['id']
     house.save()

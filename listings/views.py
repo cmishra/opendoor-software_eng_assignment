@@ -33,4 +33,4 @@ def listings_func(request_dict):
         else:
             kwargs['{0}__{1}'.format(column, 'lte')] = threshold
     print kwargs
-    return serialize('geojson', House.objects.all())
+    return serialize('geojson', House.objects.filter(**kwargs))
