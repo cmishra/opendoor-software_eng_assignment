@@ -18,7 +18,7 @@ for index, row in data.iterrows():
                   bedrooms=row['bedrooms'],
                   bathrooms=row['bathrooms'],
                   sq_ft=row['sq_ft'],
-                  lat=row['lat'],
-                  lng=row['lng'])
+                  lat=float(row['lat']),
+                  lng=float(row['lng']))
     print row['id']
     house.save()
