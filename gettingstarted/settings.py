@@ -80,8 +80,8 @@ WSGI_APPLICATION = 'gettingstarted.wsgi.application'
 
 DATABASES = {}
 DATABASES['default'] = dj_database_url.config()
-DATABASES['default']['NAME'] = "cmishra_testrun"
-DATABASES['default']['PASSWORD'] = ''
+# DATABASES['default']['NAME'] = "cmishra_testrun"
+# DATABASES['default']['PASSWORD'] = ''
 # DATABASES['default']['ENGINE'] = 'django_postgrespool'
 
 
