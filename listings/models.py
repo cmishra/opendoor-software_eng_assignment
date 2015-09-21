@@ -14,5 +14,5 @@ class House(models.Model):
     bedrooms = models.IntegerField()
     bathrooms = models.IntegerField()
     sq_ft = models.IntegerField()
-    # lat = models.FloatField()
-    # lng = models.FloatField()
+    lat = models.FloatField()
+    lng = models.FloatField()
