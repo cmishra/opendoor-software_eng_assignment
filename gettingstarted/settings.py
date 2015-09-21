@@ -39,8 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'hello',
-    'listings',
-    'djgeojson'
+    'listings'
 )
 
 MIDDLEWARE_CLASSES = (
