@@ -1,36 +1,13 @@
-# python-getting-started
+# Open Door Take Home Problem: Software Engineer
 
-A barebones Python app, which can easily be deployed to Heroku.
+## The API endpoint
+[API endpoint link](https://arcane-sands-4838.herokuapp.com/listings?)
 
-This application support the [Getting Started with Python on Heroku](https://devcenter.heroku.com/articles/getting-started-with-python) article - check it out.
-
-## Running Locally
-
-Make sure you have Python [installed properly](http://install.python-guide.org).  Also, install the [Heroku Toolbelt](https://toolbelt.heroku.com/) and [Postgres](https://devcenter.heroku.com/articles/heroku-postgresql#local-setup).
-
-```sh
-$ git clone git@github.com:heroku/python-getting-started.git
-$ cd python-getting-started
-$ pip install -r requirements.txt
-$ createdb python_getting_started
-$ foreman run python manage.py migrate
-$ python manage.py collectstatic
-$ foreman start web
-```
-
-Your app should now be running on [localhost:5000](http://localhost:5000/).
-
-## Deploying to Heroku
-
-```sh
-$ heroku create
-$ git push heroku master
-$ heroku run python manage.py migrate
-$ heroku open
-```
-
-## Documentation
-
-For more information about using Python on Heroku, see these Dev Center articles:
-
-- [Python on Heroku](https://devcenter.heroku.com/categories/python)
+## What I would do next
+The following changes are made with the assumption that I am the client:
+* Prettify the output (it's currently proper GeoJSON, but not very easy on the eyes. Put in newlines in the GeoJSON output as is convention.
+* Have a consumer-facing end where the houses are points on a map and are selectable (all selected points have more information viewed below). \n
+* Warnings on certain parameters not being proper parameters (currently they're silently ignored)
+* Proper introduction to the API at /listings instead of a all of the houses (no conditions = they all meet the condition)
+* Efficient way of handling larger data sets (sending 5 GB of housing data at once with a browser isn't smart). 
+* Geographic parameters (lat/lon coordinates forming a square, houses within that square are returned subject to the other conditions)
