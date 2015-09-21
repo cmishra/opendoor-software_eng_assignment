@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8e81fd47-a5e0-4bf2-9a92-85f9a9569ce7" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\Chetan\Dropbox\College\4_Fourth Year\Job Stuff\Opendoor project\SoftwareDev\db.sqlite3-journal" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data_import.py" afterPath="$PROJECT_DIR$/data_import.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/listings/views.py" afterPath="$PROJECT_DIR$/listings/views.py" />
-    </list>
+    <list default="true" id="8e81fd47-a5e0-4bf2-9a92-85f9a9569ce7" name="Default" comment="" />
     <ignored path="SoftwareDev.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,8 +48,8 @@
       <file leaf-file-name="data_import.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/data_import.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8625337">
-              <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.58760107">
+              <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -532,8 +528,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data_import.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8625337">
-          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.58760107">
+          <caret line="14" column="43" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
           <folding />
         </state>
       </provider>
