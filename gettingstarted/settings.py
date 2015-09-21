@@ -81,14 +81,11 @@ WSGI_APPLICATION = 'gettingstarted.wsgi.application'
 ON_HEROKU = os.environ.get('ON_HEROKU')
 HEROKU_SERVER = os.environ.get('HEROKU_SERVER')
 
+DATABASES = {}
 if ON_HEROKU:
+    DATABASES['default'] = dj_database_url.config()
+    DATABASES['default']['ENGINE'] = 'django_postgrespool'
 
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'postgresql',
-        }
-    }
 else:
     DATABASES = {
         'default': {
